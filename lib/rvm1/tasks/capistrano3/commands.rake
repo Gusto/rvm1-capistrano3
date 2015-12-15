@@ -37,7 +37,7 @@ namespace :rvm1 do
     task :bundler do
       on roles(fetch(:rvm1_roles, :all)) do
         within release_path do
-          execute :rvm, fetch(:rvm1_ruby_version), 'do', 'gem install bundler'
+          execute :rvm, fetch(:rvm1_ruby_version), 'do', 'gem install bundler -v 1.10.0'
         end
       end
     end
